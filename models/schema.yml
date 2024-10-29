@@ -1,10 +1,9 @@
 version: 2
 sources:
   - name: gz_raw_data
-
     tables:
-      - name: raw_gz_sales
-      - name: raw_gz_product
-      - name: raw_gz_ship
+    - name: ventes_brut_gwz
+    - name: produits_brut_gwz
+    - name: navire_brut_gwz
 
   
