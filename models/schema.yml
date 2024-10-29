@@ -1,10 +1,29 @@
 version: 2
 sources:
-  - name: gz_raw_data
-
+  - name: raw
+    schema: gz_raw_data
     tables:
-      - name: raw_gz_sales
-      - name: raw_gz_product
-      - name: raw_gz_ship
+      - name: sales
+        identifier: ventes_brut_gwz
+        description: les ventes réalisées par Greenweez
+
+      - name: products
+        identifier: produits_brut_gwz
+        tests:
+          - unique: 
+               column_name: products_id
+          - not_null: 
+               column_name: products_id
+
+      - name: ship
+        identifier: navire_brut_gwz
+        description: ship cost de Greenweez
+        tests:
+          - unique: 
+                column_name: orders_id
+          - not_null: 
+                column_name: orders_id
+              
+              
 
   
